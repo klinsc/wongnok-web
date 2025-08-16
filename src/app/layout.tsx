@@ -1,7 +1,10 @@
+// layout.tsx
 import type { Metadata } from 'next'
 import { Prompt } from 'next/font/google'
 import './globals.css'
+
 import Navbar from '@/components/Navbar'
+import Provider from '@/lib/provider'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -22,7 +25,9 @@ export default function RootLayout({
     <html lang='en' className={prompt.className}>
       <body className='mx-30'>
         <Navbar />
-        <main>{children}</main>
+        <main>
+          <Provider>{children}</Provider>
+        </main>
         <footer></footer>
       </body>
     </html>
