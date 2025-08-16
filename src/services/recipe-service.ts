@@ -21,6 +21,9 @@ export type Recipe = {
     name: string
   }
   user: User
+  updatedAt: string
+  createdAt: string
+  ingredient: string
 }
 
 export const fetchRecipes = async () => {
