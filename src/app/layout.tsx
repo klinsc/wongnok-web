@@ -24,9 +24,11 @@ export default function RootLayout({
   return (
     <html lang='en' className={prompt.className}>
       <body className='mx-30'>
-        <Navbar />
         <main>
-          <Provider>{children}</Provider>
+          <Provider>
+            <Navbar />
+            {children}
+          </Provider>
         </main>
         <footer></footer>
       </body>
